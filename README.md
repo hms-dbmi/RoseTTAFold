@@ -21,13 +21,20 @@ conda env create -f RoseTTAFold-linux-cu101.yml
 # create conda environment for pyRosetta folding & running DeepAccNet
 conda env create -f folding-linux.yml
 ```
-
+Later, use this code later to activate virtual environment:
+```
+conda activate RoseTTAFold
+```
 3. Download network weights (under Rosetta-DL Software license -- please see below)  
 While the code is licensed under the MIT License, the trained weights and data for RoseTTAFold are made available for non-commercial use only under the terms of the Rosetta-DL Software license. You can find details at https://files.ipd.uw.edu/pub/RoseTTAFold/Rosetta-DL_LICENSE.txt
 
 ```
 wget https://files.ipd.uw.edu/pub/RoseTTAFold/weights.tar.gz
 tar xfz weights.tar.gz
+```
+To download faster, use
+```
+aria2c https://files.ipd.uw.edu/pub/RoseTTAFold/weights.tar.gz --dir='/home/dell/Documents/databases' 
 ```
 
 4. Download and install third-party software.
